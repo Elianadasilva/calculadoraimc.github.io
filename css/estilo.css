@@ -1,0 +1,158 @@
+body{
+	background: rgb(205 201 201);
+}
+#logo{
+	width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+}
+#logo_imagem{
+	width: 1000px;
+}
+
+#container{
+	width: 1000px;
+	margin: auto;
+	background: white;
+
+}
+#titulo{
+	text-align: left;
+	font-family: "Georgia", Serif;
+	font-size: 28px;
+	padding-left: 30px;
+	padding-right: 20px;
+	font-weight: bold;
+}
+.text{
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: justify;
+	font-size: 20px;
+	text-align: justify;
+	font-family: "Helvetica", Sans-serif;
+}
+#tabela_imc{
+	margin: auto;
+	width: 600px;
+}
+#titulo_tabela{
+	color: white;
+    background: rgb(134, 22, 9);
+    font-size: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+#tabela_body{
+	background: rgb(67 205 128);
+	font-size: 23px;
+}
+td{
+	padding-left: 5px;
+    padding-right: 5px;
+}
+.calculadora{
+	margin: auto;
+	width: 350px;
+	border-radius: 10px;
+}
+#caixatitulo{
+	margin: auto;
+	width: 350px;
+	background: rgb(70 130 180);
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	border-color: black;
+
+}
+#titulocalc{
+	color: black;
+	text-align: center;
+	font-family: "Arial",sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+.form{
+	width: 350px;
+	background: rgb(205 201 201);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	font-size: 20px;
+	text-align: left;
+	font-family: "Helvetica", Sans-serif;
+	font-weight: bold;
+	color: rgb(205 0 0);
+}
+#altura{
+	width: 330px;
+	height: 25px;
+	border-radius: 4px;
+	border-color: rgb(0 205 102);
+}
+#peso{
+	width: 330px;
+	height: 25px;
+	border-radius: 4px;
+	border-color: rgb(0 205 102);
+}
+#botao{
+	text-align: center;
+}
+.calcular{
+	background: #B03060;
+	color: white;
+	border: none;
+	height: 40px;
+	width: 300px;
+	font-weight: bold; 
+	font-size: 18px; 
+	font-family: arial, sans-serif;
+	text-shadow:none;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow:0 3px 0 #8B2252;
+	border-radius: 5px;
+
+}
+.calcular:hover{
+	background: #B03060;
+	color: white;
+	border: none;
+	height: 40px;
+	width: 300px;
+	font-weight: bold; 
+	font-size: 18px; 
+	font-family: arial, sans-serif;
+	text-shadow:none;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow:0 3px 0 #8B2252;
+	border-radius: 5px;
+
+}
+.calcular:active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+
+}
+#resultado{
+	display: flex;
+	margin: auto;
+	width: 300px;
+	height: 150px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+	font-family: "Helvetica", Sans-serif;
+	background: rgb(238 154 73);
+	box-sizing: border-box;
+	user-select: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+}
