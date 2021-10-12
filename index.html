@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora IMC</title>
+	<link rel="shortcut icon" href="imagens/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<div id="logo">
+		<img src="imagens/logo.png" alt="Logo Calculadora IMC" id="logo_imagem">
+	</div>
+	<br><br>
+	<div id="container">
+		<br>
+		<div class="caixa_text">
+			<h1 id="titulo"> O que é IMC?</h2>
+			<div class="text">
+				<p>
+					IMC é a sigla para Índice de Massa Corporal,que é um cálculo que serve para avaliar se a pessoa está dentro do seu peso ideal em relação à altura. Esse cálculo é usado para detectar casos de obesidade ou desnutrição. Confira na tabela a seguir os  possíveis resultados do cálculo do IMC:
+				</p>
+			</div>
+			<div >
+				<table border="0" id="tabela_imc">
+					<thead id="titulo_tabela">
+						<tr >
+							<th>IMC</th>
+							<th>Resultado</th>
+						</tr>
+					</thead>
+					<tbody id="tabela_body">
+						<tr>
+							<td>Menos do que 18,5</td>
+							<td>Abaixo do peso</td>
+						</tr>
+						<tr>
+							<td>Entre 18,5 e 24,9</td>
+							<td>Peso normal</td>
+						</tr>
+						<tr>
+							<td>Entre 25 e 29,9</td>
+							<td>Sobrepeso</td>
+						</tr>
+						<tr>
+							<td>Entre 30 e 34,9</td>
+							<td>Obesidade grau 1</td>
+						</tr>
+						<tr>
+							<td>Entre 35 e 39,9</td>
+							<td>Obesidade grau 2</td>
+						</tr>
+						<tr>
+							<td>Mais do que 40</td>
+							<td>Obesidade grau 3</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+		</div>
+		<br>
+		<div class="caixa_text">
+			<h1 id="titulo"> Como calcular o IMC</h2>
+			<div class="text">
+				<p>
+					O IMC é calculado dividindo o peso pela altura elevada ao quadrado. Você também pode utilizar a nossa calculadora, basta inserir os seus dados:
+				</p>
+			</div>
+		</div>
+		<div class="calculadora">
+			<div class="form" id="caixatitulo">
+				<h1 id="titulocalc"> Calculadora IMC</h2>
+			</div>
+			<div class="form">
+				<label for="altura" >Altura (m): </label><br>
+				<input type="number" name="altura" id="altura" placeholder="Digite a altura"><br>
+			</div>
+			<div class="form">
+				<label for="peso">Peso (kg): </label><br>
+				<input type="number" name="peso" id="peso" placeholder="Digite o peso"><br><br>
+			</div>
+			<div class="form" id="botao">
+				<button class="calcular">Calcular</button>
+				<br>
+			</div>
+			<div class="form">
+				<div id="resultado"></div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+	<script type="text/javascript">
+		var calcular = document.querySelector(".calcular");
+		calcular.addEventListener("click", ()=>{ 
+			var altura = document.querySelector("#altura").value;
+			var peso = document.querySelector("#peso").value;
+
+			imc = peso/(altura*altura);
+			if(imc<18.5){
+				situacao = "Abaixo do peso";
+			}
+
+			if(imc>18.5 && imc<24.9){
+				situacao = " Peso normal";
+			}
+			if(imc>25 && imc<29.9){
+				situacao = " Sobrepeso";
+			}
+			if(imc>30 && imc<34.9){
+				situacao = " Obesidade grau 1";
+			}
+			if(imc>35 && imc<39.9){
+				situacao = " Obesidade grau 2";
+			}
+			if(imc>40){
+				situacao = " Obesidade grau 3";
+			}
+
+			document.querySelector('#resultado').innerText = 'IMC: '+imc+" Situação: "+situacao
+		});
+	</script>
+</body>
+</html>
